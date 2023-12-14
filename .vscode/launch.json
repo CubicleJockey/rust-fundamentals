@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'rustfundamentals'", // Replace with your executable name
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rustfundamentals", // Replace with your binary name
+                    "--package=rustfundamentals" // Replace with your package name
+                ],
+                "filter": {
+                    "name": "rustfundamentals", // Replace with your binary name
+                    "kind": "bin"
+                }
+            },
+            "args": [], // Arguments to the executable
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "cargo build", // Ensures your code is built before debugging
+            "sourceLanguages": ["rust"],
+            "program": "${workspaceFolder}/target/debug/rustfundamentals" // Replace with the path to your binary
+        }
+    ]
+}
