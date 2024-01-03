@@ -2,25 +2,45 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug Week 1 Main",
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'rustfundamentals'", // Replace with your executable name
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=rustfundamentals", // Replace with your binary name
-                    "--package=rustfundamentals" // Replace with your package name
+                    "--bin=week1_main", // This should match the binary name for Week 1
+                    "--package=rust-week1" // Replace with your package name
                 ],
                 "filter": {
-                    "name": "rustfundamentals", // Replace with your binary name
+                    "name": "week1_main",
                     "kind": "bin"
                 }
             },
-            "args": [], // Arguments to the executable
+            "args": [],
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "cargo build", // Ensures your code is built before debugging
-            "sourceLanguages": ["rust"],
-            "program": "${workspaceFolder}/target/debug/rustfundamentals" // Replace with the path to your binary
+            "preLaunchTask": "cargo build",
+            "program": "${workspaceFolder}/target/debug/week1_main" // Path to Week 1 binary
+        },
+        {
+            "name": "Debug Week 2 Main",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=week2_main", // This should match the binary name for Week 2
+                    "--package=variables" // Replace with your package name
+                ],
+                "filter": {
+                    "name": "week2_main",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "cargo build",
+            "program": "${workspaceFolder}/target/debug/week2_main" // Path to Week 2 binary
         }
+        // Add more configurations for other weeks or main.rs files as needed
     ]
 }

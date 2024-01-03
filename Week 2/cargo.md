@@ -23,3 +23,15 @@ cargo init .
 cargo init --lib .
 #Same as before but project is created as `Library` not `application`
 ```
+
+```bash
+cargo new foo-bar
+#This will  create a new project in place and use foo-bar as project name
+#This defaults to `Application` type project
+```
+
+```bash
+cargo new --lib foo-bar
+#This will  create a new project in place and use foo-bar as project name
+#Creates as `Library` type project
+```

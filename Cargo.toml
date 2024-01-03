@@ -1,10 +1,16 @@
 [package]
-name = "rustfundamentals"
+name = "rust-fundamentals"
 version = "0.1.0"
-edition = "2021"
-author = "Andre Davis<cubicle.jockey@live.com>"
+edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-#clap = {version = "4", features = ["derive"] }
+[[bin]]
+name = "week1_main"
+path = "Week 1/src/main.rs"
+
+[[bin]]
+name = "variables"
+path = "Week 2/variables/src/main.rs"
+
+# Add additional [[bin]] sections for other main.rs files as needed
